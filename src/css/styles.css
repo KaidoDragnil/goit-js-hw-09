@@ -1,12 +1,5 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
+@import 'simplelightbox/dist/simple-lightbox.min.css';
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +15,120 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+.gallery {
+  display: flex;
+  width: 1128px;
+  height: 696px;
+  flex-wrap: wrap;
+  padding: 24px 156px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  background: #fff;
+  list-style-type: none;
+}
+
+.gallery-item,
+.gallery-link {
+  width: 360px;
+  height: 200px;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.gallery-image:hover {
+  cursor: url('../img/kursor.svg'), auto;
+
+  transform: scale(1.04);
+}
+
+.modal-image {
+  background: rgba(46, 47, 66, 0.8);
+}
+.feedback-form {
+  display: inline-flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background: #fff;
+}
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+.feedback-form label input {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  display: flex;
+  width: 360px;
+  height: 40px;
+  padding: 0;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+.feedback-form label textarea {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+  width: 360px;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+.feedback-form button {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  border: none;
+  background: #4e75ff;
+}
+.feedback-form input:hover {
+  border: 1px solid #000;
+}
+
+.feedback-form button:hover {
+  background: #6c8cff;
 }
